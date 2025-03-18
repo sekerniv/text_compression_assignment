@@ -62,5 +62,6 @@ Thumbs.db  # Windows system file
 *.ec
 *.em
 
-# Ignore this task's src.LZLite files
-*.lz77
+# Ignore this task's compressed and decompressed files
+*.lz77.*
+*.decompressed.*
