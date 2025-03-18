@@ -190,12 +190,15 @@ public class LZLiteTest {
     @Test
     public void T11_testUnzipWithLeanTokenizer() {
         LZLite lzLite = new LZLite(30, false);
+        String compressed = lzLite.unzip("ABC D^" + (char) 4 + (char) 2);
+        assertEquals("ABC DBC",
+                lzLite.unzip(compressed), "Trying to compress \"ABC D^\" + (char) 4 + (char) 2");
 
-        //TODO: finish writing this test
+        compressed = lzLite.unzip("ABC D^" + (char) 1 + (char) 1);
+        assertEquals("ABC DD",
+                lzLite.unzip(compressed),
+                "Trying to compress \"ABC D^\" + (char) 1 + (char) 1");
+
     }
-
-
-
-
 
 }
