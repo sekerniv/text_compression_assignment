@@ -9,13 +9,14 @@ public class LeanTokenizer implements Tokenizer {
 
     //TODO: TASK 10
     public int[] fromTokenString(String tokenText, int index) {
-
-        return null;
+        int backwardDistance = tokenText.charAt(index + 1);
+        int length = tokenText.charAt(index + 2);
+        int[] ret = {backwardDistance, length, 3};
+        return ret;
     }
 
     //TODO: TASK 10
     public String toTokenString(int distance, int length) {
-
-        return null;
+        return "^" + (char) distance + (char) length;
     }
 }
