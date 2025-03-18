@@ -1,10 +1,13 @@
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
 import java.io.File;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@TestMethodOrder(MethodOrderer.Alphanumeric.class)
 public class LZLiteTest {
 
     private LZLite lzLite;
@@ -15,7 +18,7 @@ public class LZLiteTest {
     }
 
     @Test
-    public void testConstructor() {
+    public void T01_testConstructor() {
         int expectedWindowSize = 100;
         LZLite lzlite = new LZLite(expectedWindowSize, true);
         assertEquals(expectedWindowSize, lzlite.getWindowSize(), "Wrong window size");
@@ -24,7 +27,7 @@ public class LZLiteTest {
     }
 
     @Test
-    public void testAppendToSlidingWindow() {
+    public void T02_testAppendToSlidingWindow() {
         LZLite lzLite = new LZLite(5, true);
         lzLite.appendToSlidingWindow("ABC");
         assertEquals("ABC", lzLite.getSlidingWindow(), "Window (size 5) after appending ABC is incorrect");
@@ -35,7 +38,7 @@ public class LZLiteTest {
     }
 
     @Test
-    public void testMaxMatchInSlidingWindow() {
+    public void T03_testMaxMatchInSlidingWindow() {
         LZLite lzLite = new LZLite(10, true);
 
         // Set initial window content with repeated sequences
@@ -64,7 +67,7 @@ public class LZLiteTest {
     }
 
     @Test
-    public void testZip() {
+    public void T05_testZip() {
         // Case 1: No repetition (no compression)
         LZLite lzLite1 = new LZLite(20, true);
         String input1 = "abcdefg";
@@ -115,7 +118,7 @@ public class LZLiteTest {
     }
 
     @Test
-    public void testZipAndUnzipFileNames() {
+    public void T06_testZipAndUnzipFileNames() {
         // Test zipFileName with simple file name
         assertEquals("file.lz77.txt",
                 LZLite.zipFileName("file.txt"),
@@ -146,7 +149,7 @@ public class LZLiteTest {
     }
 
     @Test
-    public void testUnzip() {
+    public void T08_testUnzip() {
         LZLite lzLite = new LZLite(30, true);
 
         // Case 1: Simple text without compression
@@ -185,7 +188,7 @@ public class LZLiteTest {
     }
 
     @Test
-    public void testUnzipWithLeanTokenizer() {
+    public void T11_testUnzipWithLeanTokenizer() {
         LZLite lzLite = new LZLite(30, false);
 
         //TODO: finish writing this test
