@@ -7,15 +7,15 @@ public class LeanTokenizer implements Tokenizer {
 
     }
 
-    @Override
+    //TODO: TASK 10
     public int[] fromTokenString(String tokenText, int index) {
-        //TODO: TASK 10
+
         return null;
     }
 
-    @Override
+    //TODO: TASK 10
     public String toTokenString(int distance, int length) {
-        //TODO: TASK 10
+
         return null;
     }
 }
