@@ -28,7 +28,7 @@ Throughout the task, students will:
    Finally, students will see how a small change in the code structure allows switching between different compression strategies, demonstrating an important Object-Oriented Programming (OOP) concept.
 
 ---
-Detailed instructions with tasks breakdown are in a [Google Doc (in Hebrew)]([https://docs.google.com/document/d/1BxH3Ib5PUpukUodmGqb-0S7OQP0ZkyCY2F-vNO55oj0](https://docs.google.com/document/d/1BxH3Ib5PUpukUodmGqb-0S7OQP0ZkyCY2F-vNO55oj0/)].
+Detailed instructions with tasks breakdown are in a [Google Doc (in Hebrew)][https://docs.google.com/document/d/1BxH3Ib5PUpukUodmGqb-0S7OQP0ZkyCY2F-vNO55oj0/).
 
 ### **Testing & Grading**
 - The project comes with **predefined test files** to verify that the compression and decompression work correctly.
